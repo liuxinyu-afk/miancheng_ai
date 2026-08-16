@@ -1,4 +1,4 @@
-"""
+﻿"""
 绵城AI学习集市 - 全局配置
 从 .env 文件读取环境变量，统一管理数据库、JWT、AI接口等配置
 """
@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     # 应用信息
     APP_NAME: str = "绵城AI学习集市"
     APP_VERSION: str = "2.4.0"
-    DEBUG: bool = True
+    DEBUG: bool = False
 
     # MySQL 数据库
     DB_HOST: str = "127.0.0.1"
@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     DB_USER: str = "root"
     DB_PASSWORD: str = ""
     DB_NAME: str = "personal_growth_platform"
+    DB_SSL: bool = False  # 云数据库（TiDB/Aiven）需要 SSL 时设为 true
 
     # JWT 鉴权
     SECRET_KEY: str = "dev-secret-key-please-change-in-production"
